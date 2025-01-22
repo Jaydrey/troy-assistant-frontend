@@ -1,6 +1,6 @@
 import {
   AccessToken,
-  AccessTokenOptions,
+  // AccessTokenOptions,
   VideoGrant,
 } from "livekit-server-sdk";
 import { NextRequest, NextResponse } from "next/server";
