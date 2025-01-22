@@ -75,9 +75,16 @@ export async function GET(req: NextRequest) {
   }
 }
 
+interface UserInfo {
+  identity: string;
+  metadata?: string;  // Metadata should be a string
+}
+
+
+
 function createParticipantToken(
-  userInfo,
-  roomName
+  userInfo: UserInfo,
+  roomName: string,
 ) {
   const at = new AccessToken(API_KEY, API_SECRET, {
     identity: userInfo.identity,
